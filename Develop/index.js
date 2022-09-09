@@ -60,7 +60,6 @@ inquirer
     }
 ])
 .then(response =>{
-    console.log(response)
     let readEl = `<img src = 'https://img.shields.io/badge/${response.liscense}-blue.svg'>
     <h1>${response.title}</h1>
     <h2>## Description</h2>
@@ -74,11 +73,8 @@ inquirer
     <h2>##Test Instructions</h2>
     <p>${response.testing}</p>
     <h2>## Questions</h2>
-    <p>You can reach out through my Github at: ${response.github}</p>
-    <p>You can also reach out at my email at: ${response.email}</p>`
-
-
+    <p>You can reach out through my Github at :${response.github}</p>
+    <p>You can also reach out at my email at:${response.email}</p>`
 
 		fs.writeFile("README.md", readEl, error => console.log(error))
 })
-.catch(error => console.log(error))
